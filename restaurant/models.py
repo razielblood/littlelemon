@@ -15,3 +15,7 @@ class Menu(models.Model):
     title = models.CharField('Dish Name', max_length=255)
     price = models.DecimalField('Dish Price', max_digits=10, decimal_places=2)
     inventory = models.SmallIntegerField('Dish Inventory')
+
+    # add the following method in Menu class
+    def __str__(self):
+        return f'{self.title} : {str(self.price)}'
